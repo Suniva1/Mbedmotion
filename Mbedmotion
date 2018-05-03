@@ -15,7 +15,7 @@ int main() {
  while(1) {
  wait(1);
  tempsensor.read(addr, temp_read, 2); //read the two-byte temp data
- temp = 0.0625 * (((temp_read[0] << 8) + temp_read[1]) >> 4); //convert data
+ temp = 0.0625 * (((temp_read[0] << 8) + temp_read[1]) >> 4); //convert data to Celsius
  pc.printf("Temp = %.2f degC\n\r", temp);
  }
 }
